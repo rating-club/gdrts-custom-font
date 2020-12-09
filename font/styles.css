@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* basic loading of the font, note the font-family name.
+ * each URL is modified to include query string element with
+ * version of the font, in case you are making changes to
+ * ensue browsers will load proper font version. when you
+ * make change to the font, change versions also. */
+@font-face {
+  font-family: "custom-set";
+  src:url("fonts/custom-set.eot?v=1.0");
+  src:url("fonts/custom-set.eot?#iefix&v=1.0") format("embedded-opentype"),
+    url("fonts/custom-set.woff?v=1.0") format("woff"),
+    url("fonts/custom-set.ttf?v=1.0") format("truetype"),
+    url("fonts/custom-set.svg?v=1.0#custom-set") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="cuset-"]:before,
+[class*=" cuset-"]:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 "custom-set";
+  font-size: inherit;
+  text-rendering: auto;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cuset-fireball:before {
+  content: "\61";
+}
+.cuset-beer:before {
+  content: "\62";
+}
+.cuset-chevron-down:before {
+  content: "\63";
+}
+.cuset-chevron-up:before {
+  content: "\64";
+}
+.cuset-close-round:before {
+  content: "\65";
+}
+.cuset-checkmark-round:before {
+  content: "\66";
+}
+.cuset-icecream:before {
+  content: "\67";
+}
+.cuset-thumbsup:before {
+  content: "\68";
+}
+.cuset-thumbsdown:before {
+  content: "\69";
+}
+.cuset-star:before {
+  content: "\6a";
+}
+
+/* ---------------------------------------------------------------- */
+
+/* This block contains additional CSS that is used for proper styling
+ * of the rating blocks. Note the use of the font-family name, the
+ * same as with @font-face definition at the beginning of this file. */
+
+/* this font main class name is: gdrts-fonticon-cuset and cuset is the
+ * same name we have used in the plugin font class to define the font. */
+
+/* Stars Rating */
+.gdrts-with-fonticon.gdrts-fonticon-cuset .gdrts-stars-empty {
+    font-family: "custom-set";
+}
+
+.gdrts-symbol-font.gdrts-fonticon-cuset .gdrts-symbol-icon {
+    font-family: "custom-set";
+}
+
+/* Thumbs Rating */
+.gdrts-thumbs-rating.gdrts-with-fonticon.gdrts-fonticon-cuset .gdrts-thumb-link .gdrts-thumb-symbol {
+    font-family: "custom-set";
+}
+
+/* Like This */
+.gdrts-like-this.gdrts-with-fonticon.gdrts-fonticon-cuset .gdrts-like-link .gdrts-like-this-symbol {
+    font-family: "custom-set";
+}
